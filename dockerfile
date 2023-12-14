@@ -3,11 +3,13 @@ FROM node:16
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-
 RUN npm install
 
-COPY . .
+
+COPY backend/ backend/
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+
+WORKDIR /usr/src/app/backend
+CMD ["node", "server.cjs"]
