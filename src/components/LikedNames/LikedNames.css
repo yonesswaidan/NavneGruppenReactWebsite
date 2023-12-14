@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.heading {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.select {
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.list-container {
+    overflow-y: auto;
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
+}
+
+.loader {
+    text-align: center;
+}
+
+.error {
+    color: rgb(0, 0, 0);
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+

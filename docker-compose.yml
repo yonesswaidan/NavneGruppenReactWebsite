@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  navnegruppen-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5173:5173'
+    depends_on:
+      - navnegruppen-mongodb
+    environment:
+      MONGO_URI: 'mongodb://navnegruppen-mongodb:27017/NewbornNamesDB'
+      TYPE: 'commonjs' 
+
+  navnegruppen-mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - navnegruppen-mongo-data:/data/db
+
+volumes:
+  navnegruppen-mongo-data:
